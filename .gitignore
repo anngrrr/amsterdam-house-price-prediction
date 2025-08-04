@@ -9,4 +9,9 @@ wheels/
 # Virtual environments
 .venv
 
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Clean up
 .env
+uv.lock
