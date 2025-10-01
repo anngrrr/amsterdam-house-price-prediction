@@ -1,89 +1,89 @@
 ## 📂 `Amsterdam House Price Prediction`
 
-### 🧠 Цель проекта
+### 🧠 Project Goal
 
-Прогнозировать стоимость недвижимости в Амстердаме на основе открытых табличных данных.
-Проект сделан как демонстрация практического владения инструментами **машинного обучения**, **анализа данных**, **регулярной инженерии признаков** и **визуализации**.
+Predict property prices in Amsterdam based on open tabular data.
+The project showcases practical mastery of **machine learning**, **data analysis**, **regular feature engineering**, and **visualisation** tools.
 
-Это не просто модель, это **полноценный пайплайн**, от сырых данных до визуального сравнения моделей.
-
----
-
-## 🔍 Что умеет проект
-
-| Возможность                          | Кратко                                                                  |
-| ------------------------------------ | ----------------------------------------------------------------------- |
-| 📊 **Eda**                           | Богато оформленный ноутбук с графиками, хедами, корреляциями и трендами |
-| 🧼 **Очистка данных**                | Вынесена в модуль, повторно используема                                 |
-| 🧪 **Инженерия признаков**           | Возраст дома, цена за квадрат и др.                                     |
-| 🔧 **Модульное обучение моделей**    | Линейная регрессия, Ridge, Random Forest, Decision Tree                 |
-| 📈 **Визуализация результатов**      | Предсказания и ошибки на графиках                                       |
-| 🌲 **Важность признаков**            | Для каждой модели — наглядно                                            |
-| 💾 **Сохранение моделей**            | Все модели сохраняются под уникальными именами                          |
-| ♻ **Повторное использование данных** | Предобработанные данные сохраняются и подгружаются при необходимости    |
-| 🧠 **Метрики качества**              | MAE, RMSE, R² в таблице сравнения                                       |
+This is not just a model; it is a **full pipeline**, from raw data to a visual comparison of models.
 
 ---
 
-## 📁 Структура проекта
+## 🔍 What the Project Does
+
+| Capability                          | Summary                                                                  |
+| ----------------------------------- | ------------------------------------------------------------------------ |
+| 📊 **EDA**                          | Feature-rich notebook with plots, head previews, correlations, and trends |
+| 🧼 **Data Cleaning**                | Separated into a reusable module                                          |
+| 🧪 **Feature Engineering**          | Building age, price per square metre, and more                            |
+| 🔧 **Modular Model Training**       | Linear Regression, Ridge, Random Forest, Decision Tree                    |
+| 📈 **Result Visualisation**         | Predictions and errors plotted for inspection                             |
+| 🌲 **Feature Importance**           | Clear importance plots for every model                                    |
+| 💾 **Model Saving**                 | Every model is stored under a unique name                                 |
+| ♻ **Data Reuse**                    | Preprocessed data cached and reloaded when needed                         |
+| 🧠 **Quality Metrics**              | MAE, RMSE, R² collected in a comparison table                             |
+
+---
+
+## 📁 Project Structure
 
 ```
 Amsterdam-House-Price-Prediction/
 │
-├── data/                    # Исходные и предобработанные датасеты
-│   ├── amsterdam.csv        # Неизменённые оригинальные данные
-│   └── cleaned.csv          # Очищенные и сохранённые pickle/parquet
+├── data/                    # Raw and preprocessed datasets
+│   ├── amsterdam.csv        # Original data kept untouched
+│   └── cleaned.csv          # Cleaned data saved as pickle/parquet
 │
-├── models/                  # Сериализованные обученные модели
+├── models/                  # Serialized trained models
 │
 ├── notebooks/
-│   ├── eda.ipynb            # Разведочный анализ с графиками
-│   └── models_and_experiments.ipynb  # Обучение, сравнение и визуализация моделей
+│   ├── eda.ipynb            # Exploratory analysis with charts
+│   └── models_and_experiments.ipynb  # Model training, comparison, and visualisation
 │
 ├── src/
-│   ├── preprocessing.py     # Очистка и подготовка данных
-│   ├── features.py          # Генерация новых признаков
-│   ├── train.py             # Обучение одной модели
-│   ├── evaluate.py          # Метрики MAE, RMSE, R²
-│   └── utils.py             # Сохранение/загрузка моделей и утилиты
+│   ├── preprocessing.py     # Data cleaning and preparation
+│   ├── features.py          # Feature generation
+│   ├── train.py             # Train a single model
+│   ├── evaluate.py          # MAE, RMSE, R² metrics
+│   └── utils.py             # Model save/load helpers and utilities
 │
-└── README.md                # То, что ты сейчас читаешь
+└── README.md                # What you're reading right now
 ```
 
 ---
 
-## 📊 Используемые модели
+## 📊 Models Used
 
 * `LinearRegression`
 * `Ridge(alpha=1.0)`
 * `DecisionTreeRegressor (max_depth=5)`
 * `RandomForestRegressor (n_estimators=50)`
 
-## 📦 Стек технологий
+## 📦 Tech Stack
 
-| Категория         | Инструменты                      |
-| ----------------- | -------------------------------- |
-| Язык              | `Python 3.10+`                   |
-| Менеджер среды    | `uv`                             |
-| ML/регрессия      | `scikit-learn`                   |
-| Обработка         | `pandas`, `numpy`                |
-| Визуализация      | `matplotlib`, `seaborn`          |
-| Хранилище моделей | `joblib` или `pickle`            |
-| Jupyter           | для экспериментов и визуализации |
-
----
-
-## 🚀 Как запустить
-
-1. Установить зависимости `uv sync`
-2. Запустить `notebooks/eda.ipynb` для анализа и построения признаков
-3. Запустить `notebooks/models_and_experiments.ipynb` для обучения и визуализации
+| Category          | Tools                           |
+| ----------------- | ------------------------------- |
+| Language          | `Python 3.10+`
+| Environment tool  | `uv`
+| ML/Regression     | `scikit-learn`
+| Data processing   | `pandas`, `numpy`
+| Visualisation     | `matplotlib`, `seaborn`
+| Model storage     | `joblib` or `pickle`
+| Jupyter           | for experiments and visualisation |
 
 ---
 
-## 🧑‍💻 Автор
+## 🚀 How to Run
+
+1. Install dependencies with `uv sync`
+2. Open `notebooks/eda.ipynb` for analysis and feature engineering
+3. Open `notebooks/models_and_experiments.ipynb` for training and visualisation
+
+---
+
+## 🧑‍💻 Author
 
 **Anna Grabetski**
 *ML Engineer / Data Scientist*
 📫 [LinkedIn](linkedin.com/in/anngrabetski/)
-🐍 Люблю чистый код и содержательные графики.
+🐍 I love clean code and insightful charts.

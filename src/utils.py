@@ -5,7 +5,7 @@ def save_model_named(model, name: str, folder: str = "models"):
     os.makedirs(folder, exist_ok=True)
     path = os.path.join(folder, f"{name}.joblib")
     joblib.dump(model, path)
-    print(f"✅ Модель сохранена: {path}")
+    print(f"✅ Model saved: {path}")
 
 def load_model_named(name: str, folder: str = "models"):
     path = os.path.join(folder, f"{name}.joblib")
